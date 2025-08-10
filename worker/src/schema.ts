@@ -1,4 +1,3 @@
-import { buildSchema } from 'graphql';
 import { resolvers } from './resolvers';
 
 export const typeDefs = `
@@ -35,5 +34,8 @@ export const typeDefs = `
 `;
 
 export function createSchema() {
-  return buildSchema(typeDefs);
+  return {
+    typeDefs,
+    resolvers
+  };
 }
