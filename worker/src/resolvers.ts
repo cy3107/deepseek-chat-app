@@ -29,7 +29,12 @@ export const resolvers = {
       context: Context
     ): Promise<Message[]> => {
       try {
-        if (!sessionId || !context.env.CHAT_HISTORY) {
+        if (!sessionId) {
+          return [];
+        }
+
+        if (!context.env.CHAT_HISTORY) {
+          console.warn('KV storage not configured, returning empty history');
           return [];
         }
 
@@ -49,6 +54,7 @@ export const resolvers = {
     getChatSessions: async (_: any, __: any, context: Context): Promise<ChatSession[]> => {
       try {
         if (!context.env.CHAT_HISTORY) {
+          console.warn('KV storage not configured, returning empty sessions');
           return [];
         }
 
@@ -132,6 +138,8 @@ export const resolvers = {
             `session:${currentSessionId}`,
             JSON.stringify(session)
           );
+        } else {
+          console.warn('KV storage not configured, session not persisted');
         }
 
         return {
@@ -165,6 +173,8 @@ export const resolvers = {
           `session:${sessionId}`,
           JSON.stringify(session)
         );
+      } else {
+        console.warn('KV storage not configured, session not persisted');
       }
 
       return session;
@@ -177,6 +187,7 @@ export const resolvers = {
     ): Promise<boolean> => {
       try {
         if (!context.env.CHAT_HISTORY) {
+          console.warn('KV storage not configured, cannot delete session');
           return false;
         }
 
