@@ -2,8 +2,8 @@
 
 一个基于React + TypeScript + Cloudflare Workers的AI聊天应用，使用DeepSeek API和GraphQL进行通信。
 
-[![Deploy Worker](https://github.com/YOUR_USERNAME/deepseek-chat-app/actions/workflows/deploy-worker.yml/badge.svg)](https://github.com/YOUR_USERNAME/deepseek-chat-app/actions/workflows/deploy-worker.yml)
-[![Deploy Pages](https://github.com/YOUR_USERNAME/deepseek-chat-app/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/YOUR_USERNAME/deepseek-chat-app/actions/workflows/deploy-pages.yml)
+[![Deploy Worker](https://github.com/cy3107/deepseek-chat-app/actions/workflows/deploy-worker.yml/badge.svg)](https://github.com/cy3107/deepseek-chat-app/actions/workflows/deploy-worker.yml)
+[![Deploy Pages](https://github.com/cy3107/deepseek-chat-app/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/cy3107/deepseek-chat-app/actions/workflows/deploy-pages.yml)
 
 🌐 **在线体验**: [https://chat.zhimahu.work](https://chat.zhimahu.work)
 
@@ -86,7 +86,7 @@ yarn start
 ./init-repo.sh
 
 # 2. 创建GitHub仓库并推送
-git remote add origin https://github.com/YOUR_USERNAME/deepseek-chat-app.git
+git remote add origin https://github.com/cy3107/deepseek-chat-app.git
 git branch -M main
 git push -u origin main
 ```
@@ -102,7 +102,7 @@ git add .
 git commit -m "🎉 Initial commit: DeepSeek Chat App"
 
 # 添加远程仓库
-git remote add origin https://github.com/YOUR_USERNAME/deepseek-chat-app.git
+git remote add origin https://github.com/cy3107/deepseek-chat-app.git
 git branch -M main
 git push -u origin main
 ```
@@ -113,7 +113,7 @@ git push -u origin main
 
 1. **连接GitHub**: 在Cloudflare Dashboard → Workers → 连接到Git
 2. **仓库配置**:
-   - Repository: `YOUR_USERNAME/deepseek-chat-app`
+   - Repository: `cy3107/deepseek-chat-app`
    - 生产分支: `main`
    - 根目录: `worker/`
 3. **环境变量**: 
@@ -131,7 +131,7 @@ git push -u origin main
 
 1. **连接GitHub**: 在Cloudflare Dashboard → Pages → 连接到Git
 2. **项目配置**:
-   - Repository: `YOUR_USERNAME/deepseek-chat-app`  
+   - Repository: `cy3107/deepseek-chat-app`  
    - 生产分支: `main`
    - 构建命令: `yarn build`
    - 构建输出目录: `build`
@@ -189,7 +189,7 @@ git push
 
 ### GitHub Actions状态
 
-访问 `https://github.com/YOUR_USERNAME/deepseek-chat-app/actions` 查看：
+访问 `https://github.com/cy3107/deepseek-chat-app/actions` 查看：
 - ✅ CI/CD Pipeline: 代码质量检查
 - 🚀 Deploy Worker: Worker自动部署
 - 📄 Deploy Pages: Pages自动部署
