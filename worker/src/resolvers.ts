@@ -18,6 +18,7 @@ interface ChatSession {
 
 interface Context {
   env: Env;
+  ctx: ExecutionContext;
 }
 
 export const resolvers = {

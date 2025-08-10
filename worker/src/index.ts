@@ -1,6 +1,6 @@
 import { createYoga } from 'graphql-yoga';
-import { createSchema } from './schema';
-import { createContext } from './context';
+import { typeDefs } from './schema';
+import { resolvers } from './resolvers';
 
 export interface Env {
   DEEPSEEK_API_KEY: string;
@@ -8,26 +8,27 @@ export interface Env {
   CHAT_HISTORY?: KVNamespace;
 }
 
-const yoga = createYoga({
-  schema: createSchema(),
-  context: createContext,
-  cors: {
-    origin: [
-      'http://localhost:3000', 
-      'https://zhimahu.work',
-      'https://www.zhimahu.work',
-      'https://api.zhimahu.work',
-      'https://chat.zhimahu.work'
-    ],
-    credentials: true,
-  },
-  graphiql: {
-    endpoint: '/graphql',
-  },
-});
-
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    return yoga.fetch(request, { env, ctx });
+    const yoga = createYoga({
+      typeDefs,
+      resolvers,
+      context: () => ({ env, ctx }),
+      cors: {
+        origin: [
+          'http://localhost:3000', 
+          'https://zhimahu.work',
+          'https://www.zhimahu.work',
+          'https://api.zhimahu.work',
+          'https://chat.zhimahu.work'
+        ],
+        credentials: true,
+      },
+      graphiql: {
+        endpoint: '/graphql',
+      },
+    });
+
+    return yoga.fetch(request, {}, {});
   },
 };

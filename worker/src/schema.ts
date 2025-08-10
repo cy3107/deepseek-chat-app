@@ -1,5 +1,3 @@
-import { resolvers } from './resolvers';
-
 export const typeDefs = `
   type Message {
     id: ID!
@@ -32,10 +30,3 @@ export const typeDefs = `
     sessionId: String!
   }
 `;
-
-export function createSchema() {
-  return {
-    typeDefs,
-    resolvers
-  };
-}

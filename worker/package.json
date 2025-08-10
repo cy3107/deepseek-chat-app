@@ -9,9 +9,8 @@
     "build": "wrangler build"
   },
   "dependencies": {
-    "graphql": "^16.6.0",
-    "graphql-yoga": "^4.0.4",
-    "@graphql-yoga/cloudflare-workers": "^3.0.0"
+    "graphql": "^16.8.1",
+    "graphql-yoga": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
