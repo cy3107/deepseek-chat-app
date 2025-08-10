@@ -1,0 +1,21 @@
+{
+  "name": "deepseek-chat-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker backend for DeepSeek chat app",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler build"
+  },
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "graphql-yoga": "^4.0.4",
+    "@graphql-yoga/cloudflare-workers": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^4.9.5",
+    "wrangler": "^3.0.0"
+  }
+}
