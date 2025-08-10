@@ -1,15 +1,14 @@
 {
   "build": {
-    "command": "yarn install && yarn build",
+    "command": "./build-cf.sh",
     "outputDirectory": "build",
     "rootDirectory": "/",
     "environment": {
-      "NODE_VERSION": "18",
-      "YARN_VERSION": "1.22.19"
+      "NODE_VERSION": "18"
     }
   },
   "preview": {
-    "command": "yarn install && yarn build"
+    "command": "./build-cf.sh"
   },
   "domains": [
     "chat.zhimahu.work",
