@@ -32,7 +32,6 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "yarn@4.9.1",
   "browserslist": {
     "production": [
       ">0.2%",

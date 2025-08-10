@@ -1,6 +1,6 @@
 {
   "build": {
-    "command": "./build-cf.sh",
+    "command": "yarn install && yarn build",
     "outputDirectory": "build",
     "rootDirectory": "/",
     "environment": {
@@ -8,7 +8,7 @@
     }
   },
   "preview": {
-    "command": "./build-cf.sh"
+    "command": "yarn install && yarn build"
   },
   "domains": [
     "chat.zhimahu.work",
