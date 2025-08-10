@@ -1,6 +1,6 @@
 {
   "build": {
-    "command": "yarn install && yarn build",
+    "command": "npm run build",
     "outputDirectory": "build",
     "rootDirectory": "/",
     "environment": {
@@ -8,7 +8,7 @@
     }
   },
   "preview": {
-    "command": "yarn install && yarn build"
+    "command": "npm run build"
   },
   "domains": [
     "chat.zhimahu.work",
