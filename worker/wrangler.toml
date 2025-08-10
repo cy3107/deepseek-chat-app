@@ -11,8 +11,8 @@ zone_name = "zhimahu.work"
 [vars]
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 
-# KV namespace binding - will be configured in Cloudflare Dashboard
-[[kv_namespaces]]
-binding = "CHAT_HISTORY"
-id = ""
-preview_id = ""
+# KV namespace binding will be configured via Cloudflare Dashboard
+# Commented out to avoid empty ID error during deployment
+# [[kv_namespaces]]
+# binding = "CHAT_HISTORY"
+# id = "will-be-set-in-dashboard"
