@@ -9,8 +9,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "react-scripts start",
-    "build:pages": "yarn install && yarn build",
-    "preview": "serve -s build"
+    "build:pages": "yarn install --frozen-lockfile && yarn build",
+    "preview": "serve -s build",
+    "postinstall": "echo 'Dependencies installed successfully'"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -18,17 +19,18 @@
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "react-markdown": "^8.0.7",
-    "graphql": "^16.6.0",
-    "apollo-client": "^2.6.10",
-    "apollo-cache-inmemory": "^1.6.6",
-    "apollo-link-http": "^1.5.17",
-    "graphql-tag": "^2.12.6",
-    "@apollo/client": "^3.7.10",
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
-    "@types/node": "^18.15.11",
-    "web-vitals": "^2.1.4",
+    "graphql": "^16.8.1",
+    "@apollo/client": "^3.8.10",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@types/node": "^20.11.5",
+    "web-vitals": "^3.5.0"
+  },
+  "devDependencies": {
     "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "browserslist": {
     "production": [
